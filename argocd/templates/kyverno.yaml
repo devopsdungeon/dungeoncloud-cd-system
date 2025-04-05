@@ -11,9 +11,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: {{ .Values.spec.source.repoURL | quote }}
-    targetRevision: {{ .Values.spec.source.targetRevision | default "main" | quote }}
-    path: {{ .Values.spec.source.pathPrefix | default "apps" | quote }}/kyverno
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision | default "main" }}
+    path: {{ .Values.spec.source.pathPrefix | default "apps" }}/kyverno
   destination:
     server: https://kubernetes.default.svc
     namespace: kyverno
