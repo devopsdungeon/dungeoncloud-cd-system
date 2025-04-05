@@ -9,11 +9,11 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: system
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision }}
-    path: {{ .Values.spec.source.pathPrefix }}/kyverno
+    targetRevision: {{ .Values.spec.source.targetRevision | default "main" }}
+    path: {{ .Values.spec.source.pathPrefix | default "apps" }}/kyverno
   destination:
     server: https://kubernetes.default.svc
     namespace: kyverno
