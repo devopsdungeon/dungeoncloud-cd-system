@@ -11,9 +11,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: {{ .Values.spec.source.repoURL | quote }}
-    targetRevision: {{ .Values.spec.source.targetRevision | default "main" | quote }}
-    path: {{ .Values.spec.source.pathPrefix | default "apps" }}/kyverno
+    repoURL: "https://github.com/devopsdungeon/dungeoncloud-cd-system.git"
+    targetRevision: "main"
+    path: apps/kyverno
   destination:
     server: https://kubernetes.default.svc
     namespace: kyverno
