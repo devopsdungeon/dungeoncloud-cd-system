@@ -1,0 +1,9 @@
+---
+nfs-subdir-external-provisioner:
+  nfs:
+    server: 10.123.1.19
+    path: /mnt/data/nfs/kubernetes
+    reclaimPolicy: Delete
+  storageClass:
+    name: nfs
+    archiveOnDelete: false
