@@ -12,8 +12,8 @@ spec:
   project: default
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision | default "main" }}
-    path: {{ .Values.spec.source.pathPrefix | default "apps" }}/kyverno
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+    path: {{ .Values.spec.source.pathPrefix }}/kyverno
   destination:
     server: https://kubernetes.default.svc
     namespace: kyverno
