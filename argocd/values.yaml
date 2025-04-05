@@ -1,0 +1,6 @@
+---
+spec:
+  source:
+    repoURL: https://github.com/devopsdungeon/dungeoncloud-cd-system.git
+    targetRevision: main
+    pathPrefix: apps
