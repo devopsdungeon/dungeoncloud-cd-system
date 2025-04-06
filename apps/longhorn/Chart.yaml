@@ -5,4 +5,4 @@ version: 1.0.0
 dependencies:
   - name: longhron
     version: 1.8.1
-    repository: https://charts.longhorn.io
+    repository: https://charts.longhorn.io/longhorn
