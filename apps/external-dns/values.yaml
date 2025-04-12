@@ -8,6 +8,7 @@ external-dns:
   sources:
     - ingress
     - service
+    - crd
   domainFilters:
     - intern.devopsdungeon.net
     - 1.123.10.in-addr.arpa
