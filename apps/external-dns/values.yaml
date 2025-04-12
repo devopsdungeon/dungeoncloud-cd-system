@@ -5,6 +5,7 @@ external-dns:
   registry: txt
   txtPrefix: external-dns-
   txtOwnerId: k8s
+  policy: sync
   sources:
     - ingress
     - service
