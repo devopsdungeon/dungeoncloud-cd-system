@@ -2,7 +2,7 @@
 external-dns:
   provider:
     name: rfc2136
-  logLevel: debug
+  logLevel: panic
   registry: txt
   txtPrefix: external-dns-
   txtOwnerId: k8s
