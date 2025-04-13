@@ -1,8 +1,11 @@
 ---
 external-dns:
+  image:
+    repository: 5470/external-dns
+    tag: latest
   provider:
     name: rfc2136
-  logLevel: panic
+  logLevel: debug
   registry: txt
   txtPrefix: external-dns-
   txtOwnerId: k8s
