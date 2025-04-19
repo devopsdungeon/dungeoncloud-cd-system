@@ -1,8 +1,5 @@
 ---
 external-dns:
-  image:
-    repository: 5470/external-dns
-    tag: latest
   provider:
     name: pdns
   logLevel: debug
@@ -18,12 +15,12 @@ external-dns:
     - intern.devopsdungeon.net
     - 1.123.10.in-addr.arpa
   extraArgs:
-    - --pdns-server=10.123.1.2:54
+    - --pdns-server=http://10.123.1.2:54
     - --pdns-server-id=nis-1-dod
     - --pdns-api-key=854eMruaKQZJ74GZzRVvqVXk
-  env:
-    - name: RFC2136_TSIG_SECRET
-      valueFrom:
-        secretKeyRef:
-          name: rfc2136-tsig-secret
-          key: TSIG_SECRET
+  #env:
+  #  - name: RFC2136_TSIG_SECRET
+  #    valueFrom:
+  #      secretKeyRef:
+  #        name: rfc2136-tsig-secret
+  #        key: TSIG_SECRET
