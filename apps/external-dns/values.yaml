@@ -2,7 +2,7 @@
 external-dns:
   provider:
     name: pdns
-  logLevel: debug
+  logLevel: info
   registry: txt
   txtPrefix: external-dns-
   txtOwnerId: k8s
@@ -17,10 +17,10 @@ external-dns:
   extraArgs:
     - --pdns-server=http://10.123.1.2:8081
     - --pdns-server-id=localhost
-    - --pdns-api-key=854eMruaKQZJ74GZzRVvqVXk
-  #env:
-  #  - name: RFC2136_TSIG_SECRET
-  #    valueFrom:
-  #      secretKeyRef:
-  #        name: rfc2136-tsig-secret
-  #        key: TSIG_SECRET
+    - --pdns-api-key=${PDNS_API_KEY}
+  env:
+    - name: PDNS_API_KEY
+      valueFrom:
+        secretKeyRef:
+          name: pdns-api-key
+          key: PDNS_API_KEY
