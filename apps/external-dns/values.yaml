@@ -16,7 +16,7 @@ external-dns:
     - 1.123.10.in-addr.arpa
   extraArgs:
     - --pdns-server=http://10.123.1.2:8081
-    - --pdns-server-id=nis-1-dod
+    - --pdns-server-id=localhost
     - --pdns-api-key=854eMruaKQZJ74GZzRVvqVXk
   #env:
   #  - name: RFC2136_TSIG_SECRET
