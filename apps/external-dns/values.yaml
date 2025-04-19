@@ -23,4 +23,4 @@ external-dns:
       valueFrom:
         secretKeyRef:
           name: pdns-api-key
-          key: pdns-api-key
+          key: API_KEY
