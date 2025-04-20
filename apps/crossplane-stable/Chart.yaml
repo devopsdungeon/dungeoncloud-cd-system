@@ -1,0 +1,8 @@
+---
+apiVersion: v2
+name: crossplane-stable
+version: 1.0.0
+dependencies:
+  - name: crossplane-stable
+    version: 1.19.1
+    repository: ttps://charts.crossplane.io/stable
