@@ -1,0 +1,63 @@
+---
+apiVersion: longhorn.io/v1beta2
+kind: Node
+metadata:
+  name: kube-test-1
+  namespace: longhorn-system
+spec:
+  allowScheduling: true
+  disks:
+    disk-1:
+      allowScheduling: true
+      diskDriver: ""
+      diskType: filesystem
+      evictionRequested: false
+      path: /mnt/longhorn
+      storageReserved: 0
+      tags: []
+  evictionRequested: false
+  instanceManagerCPURequest: 0
+  name: kube-test-1
+  tags: []
+---
+apiVersion: longhorn.io/v1beta2
+kind: Node
+metadata:
+  name: kube-test-2
+  namespace: longhorn-system
+spec:
+  allowScheduling: true
+  disks:
+    disk-1:
+      allowScheduling: true
+      diskDriver: ""
+      diskType: filesystem
+      evictionRequested: false
+      path: /mnt/longhorn
+      storageReserved: 0
+      tags: []
+  evictionRequested: false
+  instanceManagerCPURequest: 0
+  name: kube-test-2
+  tags: []
+---
+apiVersion: longhorn.io/v1beta2
+kind: Node
+metadata:
+  name: kube-test-3
+  namespace: longhorn-system
+spec:
+  allowScheduling: true
+  disks:
+    disk-1:
+      allowScheduling: true
+      diskDriver: ""
+      diskType: filesystem
+      evictionRequested: false
+      path: /mnt/longhorn
+      storageReserved: 0
+      tags: []
+  evictionRequested: false
+  instanceManagerCPURequest: 0
+  name: kube-test-3
+  tags: []
