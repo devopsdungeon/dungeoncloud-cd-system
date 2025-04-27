@@ -4,5 +4,5 @@ name: cnpg
 version: 1.0.0
 dependencies:
   - name: cloudnative-pg
-    version: 1.25.1
+    version: 0.23.2
     repository: https://cloudnative-pg.github.io/charts
