@@ -2,3 +2,5 @@
 longhorn:
   preUpgradeChecker:
     jobEnabled: false
+  persistence:
+    defaultClass: false
